@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+
+  jupyter:
+    image: guisilveira/jupyter
+    user: "${UID}"
+    container_name: jupyter
+    environment:
+      - AWS_ACCESS_KEY_ID=silveira
+      - AWS_SECRET_ACCESS_KEY=guilherme@123
+      - AWS_REGION=us-east-1
+    volumes:
+      - notebooks:/home/jovyan
+    ports:
+      - 8888:8888
+      - 4040:4040
+    command: jupyter lab --ip 0.0.0.0 --port 8888 --no-browser --NotebookApp.token='' --NotebookApp.password=''
+
+volumes:
+  notebooks:
