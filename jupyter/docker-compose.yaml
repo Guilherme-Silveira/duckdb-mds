@@ -4,7 +4,6 @@ services:
 
   jupyter:
     image: guisilveira/jupyter
-    user: "${UID}"
     container_name: jupyter
     volumes:
       - notebooks:/home/jovyan
