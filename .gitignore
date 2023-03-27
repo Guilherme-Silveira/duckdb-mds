@@ -1,2 +1,5 @@
 datasets
 .env
+jaffle_shop
+logs
+.*
