@@ -4,6 +4,7 @@ duckdb:
     dev:
       type: duckdb
       path: ':memory:'
+      external_root: 's3://warehouse-iceberg-738767130343'
       extensions:
         - httpfs
       settings:
