@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    meta:
+      external_location: "read_csv_auto('https://dbt-tutorial-public.s3.amazonaws.com/jaffle_shop_{name}.csv')"
+    tables:
+      - name: customers
+      - name: orders
