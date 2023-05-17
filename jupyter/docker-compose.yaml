@@ -5,12 +5,13 @@ services:
   jupyter:
     image: guisilveira/jupyter
     container_name: jupyter
+    user: root
     volumes:
       - notebooks:/home/jovyan
     ports:
       - 8888:8888
       - 4040:4040
-    command: jupyter lab --ip 0.0.0.0 --port 8888 --no-browser --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.disable_check_xsrf=True
+    command: jupyter lab --ip 0.0.0.0 --port 8888 --no-browser --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.disable_check_xsrf=True --allow-root
 
 volumes:
   notebooks:
