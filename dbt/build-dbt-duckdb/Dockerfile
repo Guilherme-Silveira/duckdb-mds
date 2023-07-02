@@ -109,7 +109,7 @@ RUN python -m pip install --no-cache-dir "git+https://github.com/dbt-labs/${dbt_
 # dbt-third-party
 ##
 FROM dbt-core as dbt-third-party
-RUN python -m pip install --no-cache-dir "${dbt_third_party}"
+RUN python -m pip install --no-cache-dir "${dbt_third_party}" pyiceberg
 
 ##
 # dbt-all
