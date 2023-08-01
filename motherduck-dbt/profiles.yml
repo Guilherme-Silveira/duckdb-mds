@@ -1,0 +1,6 @@
+duckdb:
+  target: prod
+  outputs:
+    prod:
+      type: duckdb
+      path: 'md:jaffle_shop'

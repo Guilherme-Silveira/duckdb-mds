@@ -5,5 +5,7 @@ services:
     build: .
     image: superset-duckdb
     container_name: superset-duckdb
+    environment:
+      - MOTHERDUCK_TOKEN=${MOTHERDUCK_TOKEN:-}
     ports:
       - "8088:8088"

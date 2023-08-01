@@ -17,6 +17,6 @@ RUN superset db upgrade && superset init
 
 RUN superset import_datasources -p /app/import_datasources.yaml
 
-RUN pip install duckdb-engine duckdb dbt-duckdb==1.2.3
+RUN pip install duckdb-engine duckdb==0.8.1 dbt-duckdb
 
 RUN python -c 'import duckdb; con = duckdb.connect(database="/app/superset_home/abc.db", read_only=False); con.execute("INSTALL 'httpfs';"); con.execute("LOAD 'httpfs';")'

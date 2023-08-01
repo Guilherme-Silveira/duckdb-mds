@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: stripe
+    meta:
+      external_location: "read_csv_auto('https://dbt-tutorial-public.s3.amazonaws.com/stripe_{name}.csv')"
+    tables:
+      - name: payments
